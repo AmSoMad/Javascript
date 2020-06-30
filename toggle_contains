@@ -1,0 +1,9 @@
+    // 클래스중에 contains 가지고있는지 type boolean
+    //const hasClass = title.classList.contains(CLICKED_CLASS);
+    // if(hasClass){
+    //     title.classList.remove(CLICKED_CLASS);
+    // }else{
+    //     title.classList.add(CLICKED_CLASS);
+    // }
+
+    title.classList.toggle(CLICKED_CLASS);
