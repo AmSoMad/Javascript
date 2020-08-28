@@ -1,0 +1,33 @@
+//클릭 이벤트부분
+$('html').click(function(e) {
+	var areaPoint1 = document.querySelector('h2.info-title');
+	var areaPoint2 = document.querySelector('div.wrap');
+	var areaPoint3 = document.querySelector('nav.sub-lnb');
+	var areaPoint4 = document.querySelector('td');
+	var areaPoint5 = document.querySelector('div.inner');
+	var areaPoint6 = document.querySelector('p');
+	var areaPoint7 = document.querySelector('h2');
+	var areaPoint8 = document.querySelector('div.container-fluid');
+	//배경클릭부분
+	if(($(e.target).has().prevObject).get()[0] == areaPoint1 || ($(e.target).has().prevObject).get()[0] == areaPoint2 || ($(e.target).has().prevObject).get()[0] == areaPoint3 || ($(e.target).has().prevObject).get()[0] == areaPoint4 || ($(e.target).has().prevObject).get()[0] == areaPoint5 || ($(e.target).has().prevObject).get()[0] == areaPoint6 || ($(e.target).has().prevObject).get()[0] == areaPoint7 || ($(e.target).has().prevObject).get()[0] == areaPoint8){
+ 		if(srchNull == $('input[name=srchWord]').val() && srchNull ==  $('input[name=srchStrDt]').val() && srchNull == $('input[name=reqNm]').val() && srchNull == $('input[name=status]').val()){
+ 		        $('.filter-wrap').show();
+ 		        $('.current').hide();
+ 		        $('.current').find('input[text]').each(function() {
+ 		        	$(this).val('');
+ 	 	        });
+ 		       return;
+		}else if(srchNull != $('input[name=srchWord]').val() || srchNull != $('input[name=srchStrDt]').val() || srchNull != $('input[name=reqNm]').val() || srchNull != $('input[name=status]').val()){
+		        $('.current').find('input[type=text]').each(function() {
+ 		        	if(srchNull == $(this).val()){
+ 		 		      	$(this).parents('.current').hide();
+ 			         	$(this).parents('.current').siblings('.filter-wrap').show();
+ 		        	}else{
+
+ 		        		return;
+ 		        	}
+ 	 	        });
+		    return;
+		}
+	}//클릭 if절
+ });
