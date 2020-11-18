@@ -1,5 +1,6 @@
 https://developer.mozilla.org/ko/docs/Web/API/notification
 https://yoontv.kr/entry/%ED%81%AC%EB%A1%AC%EA%B0%9C%EB%B0%9C-%EC%95%8C%EB%A6%BC%EB%A9%94%EC%84%B8%EC%A7%80-%EB%B3%B4%EB%82%B4%EA%B8%B0
+https://untitledtblog.tistory.com/107
 
 <button onclick="notifyMe()">Notify me!</button>
 
