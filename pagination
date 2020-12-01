@@ -1,0 +1,22 @@
+		PaginationInfo pagination = new PaginationInfo();
+    	pagination.setCurrentPageNo(findBoard.getPageNo());
+    	pagination.setRecordCountPerPage(10);
+    	pagination.setPageSize(10);
+    	pagination.setTotalRecordCount(cnt);
+    	model.addAttribute("pagination", pagination);
+      
+      
+          <Pagination class="text-center"  th:if="${cnt > 0}">
+						<nav aria-labe="Page navigation" class="pagenate-wrap mt30">
+							<div class="page-info">
+								<div class="total">
+									Total<span th:text="${pagination.totalRecordCount}"></span>
+								</div>
+								<div class="page">
+									Page<span><strong th:text="${pagination.currentPageNo}"></strong>/<th:block th:text="${pagination.totalPageCount}"></th:block></span>
+								</div>
+							</div>
+							<ul class="pagination justify-content-center" th:utext="${#enterUtils.drawPagination(pagination,#httpServletRequest.getContextPath(),'fnSearch')}">
+							</ul>
+						</nav>
+					</Pagination>
