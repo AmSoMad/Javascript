@@ -24,7 +24,7 @@
           
           
           
-                  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae5954fdbbaa41c3b86b5eaed1065dbe&libraries=services,clusterer,drawing"></script>
+                  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=lllllllllllllll&libraries=services,clusterer,drawing"></script>
                 <script type="text/javascript">
 
                 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
