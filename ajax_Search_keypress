@@ -1,0 +1,21 @@
+$('input[type=combo]').on('keypress keyup keydown',function(){
+	var checkList = $("input[name='HomeName2']").val();
+	var people = [];
+	$.ajax({
+				type: "POST", 
+				url : "../ajax/ajaxSiteNameList.php",
+				data : ({ checkList : checkList }),
+				dataType : "json",
+				success : function(result){
+					try{
+						$.each(result, function(key, value) {
+						people.push(value);
+						});
+					}finally{
+						$('input[type=combo]').w2field('combo', { items: people, match : 'contains'});
+					}
+				},		
+			});
+});
+
+
