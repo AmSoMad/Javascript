@@ -1,0 +1,11 @@
+					$(document).on('keydown',function(){
+						if (event.ctrlKey && event.keyCode == 67){ // ctrl + c
+							event.keyCode = 0;
+							event.returnValue = false;
+							return false;
+						}
+						if (event.metaKey && event.keyCode == 67){ // command + c
+							event.keyCode = 0;
+							event.returnValue = false;
+						}
+					});
