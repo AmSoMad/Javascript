@@ -1,11 +1,11 @@
-					<div class="general-wrap" sec:authorize="hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_MANAGER')">
+					<div class="general-wrap">
 						<div class="general-collapse">
 							<nav class="tab-wrap black">
 								<div class="nav nav-tabs" role="tablist">
-									<a class="nav-item nav-link active" id="detail" href="#" routerlinkactive="active">프로젝트 상세</a>
-									<a class="nav-item nav-link" id="worker" href="#">작업자 관리</a>
-									<a class="nav-item nav-link" id="progress" href="#">작업 파일 관리</a> <!-- 작업 진행율 관리 -->
-									<a class="nav-item nav-link" id="calculate" href="#">정산 관리</a>
+									<a class="nav-item nav-link active" id="detail"> 상세</a>
+									<a class="nav-item nav-link" id="worker" href="#"> 관리</a>
+									<a class="nav-item nav-link" id="progress" href="#">작업</a>
+									<a class="nav-item nav-link" id="calculate" href="#">정산</a>
 								</div>
 							</nav>
 							<div class="general-collapse-wrap mb30" id="tab-content">
