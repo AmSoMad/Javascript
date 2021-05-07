@@ -1,0 +1,39 @@
+$('input[name=ind_code]').on('keypress keyup keydown',function(){
+	$('#dropList').addClass('show');
+	var ksic_no = $('input[name=ind_code]').val();
+	var people = [];
+	if(isNaN(ksic_no)){
+		//문자일경우
+		if(ksic_no != null && ksic_no !== ""){
+				$.ajax({
+					type: "POST", 
+					url : "/location/ksic_keyword",
+					data : ({ ksic_kw : ksic_no }),
+					dataType : "json",
+					success : function(result){
+						var htmlInner = "";
+						for(var i = 0; i < result.length; i++){
+							htmlInner += "<a class='dropdown-item' value = '"+result[i].ksic_no+"'href = 'javascript:pointMarker_("+result[i].ksic_no+")'>"+result[i].ksic_no+" : "+result[i].ksic_nm+"</a>";
+						}
+						$('#dropList').html(htmlInner);
+					},		
+				});						
+		}
+	}else{
+		//숫자일경우
+				$.ajax({
+					type: "POST", 
+					url : "/location/ksic",
+					data : ({ ksic_no : ksic_no }),
+					dataType : "json",
+					success : function(result){
+						var htmlInner = "";
+						for(var i = 0; i < result.length; i++){
+							htmlInner += "<a class='dropdown-item' value = '"+result[i].ksic_no+"'href = 'javascript:pointMarker_("+result[i].ksic_no+")'>"+result[i].ksic_no+" : "+result[i].ksic_nm+"</a>";
+						}
+						$('#dropList').html(htmlInner);
+					},		
+				});
+
+	}
+});		
